@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: com.api.test.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 3.743 s <<< FAILURE! - in com.api.test.TestRunner
+Create a new user and validate the response(User API Testing with Data-Driven)  Time elapsed: 0.31 s  <<< ERROR!
+io.cucumber.core.runner.DuplicateStepDefinitionException: Duplicate step definitions in com.api.stepdefinition.API_StepDefinitions.setUserId(java.lang.String) and com.api.stepdefinition.API_StepDefinitions.theUserIdIs(java.lang.String)
+
+com.api.test.TestRunner  Time elapsed: 1.575 s  <<< ERROR!
+org.junit.runner.notification.StoppedByUserException
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+

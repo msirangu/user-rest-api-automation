@@ -1,0 +1,742 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2024-10-17T23:40:54.285Z",
+        "before": [
+          {
+            "result": {
+              "duration": 14000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.api.stepdefinition.Hooks.testStart(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "Create a new user and validate the response",
+        "description": "",
+        "id": "user-api-testing-with-data-driven;create-a-new-user-and-validate-the-response",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 16000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the API endpoint is \"https://userserviceapp-f5a54828541b.herokuapp.com/uap/createusers\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://userserviceapp-f5a54828541b.herokuapp.com/uap/createusers\"",
+                  "offset": 20
+                }
+              ],
+              "location": "com.api.stepdefinition.API_StepDefinitions.the_api_endpoint_is(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the Authorization token is \"Basic TnVtcHlAZ21haWwuY29tOnVzZXJhcGlAb2N0b2Jlcg\u003d\u003d\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Basic TnVtcHlAZ21haWwuY29tOnVzZXJhcGlAb2N0b2Jlcg\u003d\u003d\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.api.stepdefinition.API_StepDefinitions.the_authorization_token_is(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3756000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I send a POST request to create a new user with the following details:",
+            "match": {
+              "location": "com.api.stepdefinition.API_StepDefinitions.i_send_a_post_request_to_create_a_new_user_with_the_following_details(java.util.List\u003cjava.util.Map\u003cjava.lang.String, java.lang.String\u003e\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "plotNumber",
+                  "street",
+                  "state",
+                  "country",
+                  "zipCode",
+                  "user_first_name",
+                  "user_last_name",
+                  "user_contact_number",
+                  "user_email_id",
+                  "creation_time",
+                  "last_mod_time"
+                ]
+              },
+              {
+                "cells": [
+                  "102-AB",
+                  "village",
+                  "CA",
+                  "USA",
+                  "95671",
+                  "veenavv",
+                  "papavv",
+                  "2200051229",
+                  "veenapapavv@gmail.com",
+                  "2024-09-20T17:50:39.297+00:00",
+                  "2024-09-20T17:50:39.297+00:00"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 55000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I validate the response status code is 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 39
+                }
+              ],
+              "location": "com.api.stepdefinition.API_StepDefinitions.i_validate_the_response_status_code_is(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 951000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I validate the response contains the user with first name \"veenavv\", last name \"papavv\", and email \"veenapapavv@gmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"veenavv\"",
+                  "offset": 58
+                },
+                {
+                  "val": "\"papavv\"",
+                  "offset": 79
+                },
+                {
+                  "val": "\"veenapapavv@gmail.com\"",
+                  "offset": 99
+                }
+              ],
+              "location": "com.api.stepdefinition.API_StepDefinitions.i_validate_the_response_contains_the_user_with_first_name_last_name_and_email(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@userCreateAPI"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-10-17T23:40:59.392Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.api.stepdefinition.Hooks.testStart(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 16,
+        "name": "Validate status code for the Get All Users endpoint",
+        "description": "",
+        "id": "user-api-testing-with-data-driven;validate-status-code-for-the-get-all-users-endpoint",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the API endpoint is \"https://userserviceapp-f5a54828541b.herokuapp.com/uap/users\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://userserviceapp-f5a54828541b.herokuapp.com/uap/users\"",
+                  "offset": 20
+                }
+              ],
+              "location": "com.api.stepdefinition.API_StepDefinitions.the_api_endpoint_is(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the Authorization token is \"Basic TnVtcHlAZ21haWwuY29tOnVzZXJhcGlAb2N0b2Jlcg\u003d\u003d\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Basic TnVtcHlAZ21haWwuY29tOnVzZXJhcGlAb2N0b2Jlcg\u003d\u003d\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.api.stepdefinition.API_StepDefinitions.the_authorization_token_is(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1403000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I validate the status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 30
+                }
+              ],
+              "location": "com.api.stepdefinition.API_StepDefinitions.validateStatusCode(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 9000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I validate the response header contains \"Content-Type\" with value \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Content-Type\"",
+                  "offset": 40
+                },
+                {
+                  "val": "\"application/json\"",
+                  "offset": 66
+                }
+              ],
+              "location": "com.api.stepdefinition.API_StepDefinitions.validateResponseHeader(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@userGetALLAPI"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-10-17T23:41:00.824Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.api.stepdefinition.Hooks.testStart(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 24,
+        "name": "Validate status code 200 for valid user ID",
+        "description": "",
+        "id": "user-api-testing-with-data-driven;validate-status-code-200-for-valid-user-id",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the API endpoint is \"https://userserviceapp-f5a54828541b.herokuapp.com/uap/user\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://userserviceapp-f5a54828541b.herokuapp.com/uap/user\"",
+                  "offset": 20
+                }
+              ],
+              "location": "com.api.stepdefinition.API_StepDefinitions.the_api_endpoint_is(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user ID is \"10136\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"10136\"",
+                  "offset": 15
+                }
+              ],
+              "location": "com.api.stepdefinition.API_StepDefinitions.setUserId(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the Authorization token is \"Basic TnVtcHlAZ21haWwuY29tOnVzZXJhcGlAb2N0b2Jlcg\u003d\u003d\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Basic TnVtcHlAZ21haWwuY29tOnVzZXJhcGlAb2N0b2Jlcg\u003d\u003d\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.api.stepdefinition.API_StepDefinitions.the_authorization_token_is(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 230000000,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "I send a GET request to fetch the user details",
+            "match": {
+              "location": "com.api.stepdefinition.API_StepDefinitions.sendGetRequest()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "I validate the GET status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 34
+                }
+              ],
+              "location": "com.api.stepdefinition.API_StepDefinitions.i_validate_the_get_status_code_is(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "I validate the GET response header contains \"Content-Type\" with value \"application/json\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Content-Type\"",
+                  "offset": 44
+                },
+                {
+                  "val": "\"application/json\"",
+                  "offset": 70
+                }
+              ],
+              "location": "com.api.stepdefinition.API_StepDefinitions.i_validate_the_get_response_header_contains_with_value(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@userGetbyUserID"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-10-17T23:41:01.088Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.api.stepdefinition.Hooks.testStart(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 33,
+        "name": "Update user and validate the response",
+        "description": "",
+        "id": "user-api-testing-with-data-driven;update-user-and-validate-the-response",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "the API endpoint is \"https://userserviceapp-f5a54828541b.herokuapp.com/uap/updateuser/10125\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://userserviceapp-f5a54828541b.herokuapp.com/uap/updateuser/10125\"",
+                  "offset": 20
+                }
+              ],
+              "location": "com.api.stepdefinition.API_StepDefinitions.the_api_endpoint_is(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "the Authorization token is \"Basic TnVtcHlAZ21haWwuY29tOnVzZXJhcGlAb2N0b2Jlcg\u003d\u003d\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Basic TnVtcHlAZ21haWwuY29tOnVzZXJhcGlAb2N0b2Jlcg\u003d\u003d\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.api.stepdefinition.API_StepDefinitions.the_authorization_token_is(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 885000000,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "I send an update request to create a new user with the following details:",
+            "match": {
+              "location": "com.api.stepdefinition.API_StepDefinitions.iSendAnUpdateRequestToCreateANewUserWithTheFollowingDetails(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "addressId",
+                  "plotNumber",
+                  "street",
+                  "state",
+                  "country",
+                  "zipCode",
+                  "user_id",
+                  "user_first_name",
+                  "user_last_name",
+                  "user_contact_number",
+                  "user_email_id",
+                  "creation_time"
+                ]
+              },
+              {
+                "cells": [
+                  "10093",
+                  "P1-11",
+                  "Main",
+                  "LA",
+                  "USA",
+                  "20878",
+                  "10125",
+                  "lavanya",
+                  "John",
+                  "4499934456",
+                  "Team03LavaJohn@gmail.com",
+                  "2024-10-14T15:11:14.527+00:00"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "I validate the update user response status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 51
+                }
+              ],
+              "location": "com.api.stepdefinition.API_StepDefinitions.iValidateTheUpdateUserResponseStatusCodeIs(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 52000000,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "I validate the update user response contains the user with first name \"lavanya\", last name \"John\", and email \"Team03LavaJohn@gmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"lavanya\"",
+                  "offset": 70
+                },
+                {
+                  "val": "\"John\"",
+                  "offset": 91
+                },
+                {
+                  "val": "\"Team03LavaJohn@gmail.com\"",
+                  "offset": 109
+                }
+              ],
+              "location": "com.api.stepdefinition.API_StepDefinitions.iValidateTheUpdateUserResponseContainsTheUserWithDetails(java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@updateUser"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-10-17T23:41:02.063Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.api.stepdefinition.Hooks.testStart(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 43,
+        "name": "delete user by id and validate the response",
+        "description": "",
+        "id": "user-api-testing-with-data-driven;delete-user-by-id-and-validate-the-response",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "the API endpoint is \"https://userserviceapp-f5a54828541b.herokuapp.com/uap/deleteuser\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://userserviceapp-f5a54828541b.herokuapp.com/uap/deleteuser\"",
+                  "offset": 20
+                }
+              ],
+              "location": "com.api.stepdefinition.API_StepDefinitions.the_api_endpoint_is(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "the Authorization token is \"Basic TnVtcHlAZ21haWwuY29tOnVzZXJhcGlAb2N0b2Jlcg\u003d\u003d\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Basic TnVtcHlAZ21haWwuY29tOnVzZXJhcGlAb2N0b2Jlcg\u003d\u003d\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.api.stepdefinition.API_StepDefinitions.the_authorization_token_is(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "the user ID is \"10126\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"10126\"",
+                  "offset": 15
+                }
+              ],
+              "location": "com.api.stepdefinition.API_StepDefinitions.setUserId(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 263000000,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "I validate the delete user response status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 51
+                }
+              ],
+              "location": "com.api.stepdefinition.API_StepDefinitions.iValidateTheDeleteUserResponseStatusCodeIs(int)"
+            },
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@deleteUserbyID"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2024-10-17T23:41:02.350Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.api.stepdefinition.Hooks.testStart(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 51,
+        "name": "delete user by firstname and validate the response",
+        "description": "",
+        "id": "user-api-testing-with-data-driven;delete-user-by-firstname-and-validate-the-response",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "the API endpoint is \"https://userserviceapp-f5a54828541b.herokuapp.com/uap/deleteuser/username\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://userserviceapp-f5a54828541b.herokuapp.com/uap/deleteuser/username\"",
+                  "offset": 20
+                }
+              ],
+              "location": "com.api.stepdefinition.API_StepDefinitions.the_api_endpoint_is(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "the Authorization token is \"Basic TnVtcHlAZ21haWwuY29tOnVzZXJhcGlAb2N0b2Jlcg\u003d\u003d\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Basic TnVtcHlAZ21haWwuY29tOnVzZXJhcGlAb2N0b2Jlcg\u003d\u003d\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.api.stepdefinition.API_StepDefinitions.the_authorization_token_is(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "the user first name is \"Ramuc\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Ramuc\"",
+                  "offset": 23
+                }
+              ],
+              "location": "com.api.stepdefinition.API_StepDefinitions.setUserFirstName(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 238000000,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "I validate the delete user by firstname response status code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 64
+                }
+              ],
+              "location": "com.api.stepdefinition.API_StepDefinitions.iValidateTheDeleteUserbyFirstNameResponseStatusCodeIs(int)"
+            },
+            "keyword": "When "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@deleteUserbyFirstName"
+          }
+        ]
+      }
+    ],
+    "name": "User API Testing with Data-Driven",
+    "description": "  This feature tests the User API with data-driven examples to create new users and validate responses.",
+    "id": "user-api-testing-with-data-driven",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/UserAPI.feature",
+    "tags": []
+  }
+]

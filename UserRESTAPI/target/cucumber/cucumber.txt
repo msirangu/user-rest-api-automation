@@ -1,0 +1,46 @@
+
+@userCreateAPI
+Scenario: Create a new user and validate the response                                                                            # src/test/resources/features/UserAPI.feature:5
+  Given the API endpoint is "https://userserviceapp-f5a54828541b.herokuapp.com/uap/createusers"                                  # com.api.stepdefinition.API_StepDefinitions.the_api_endpoint_is(java.lang.String)
+  And the Authorization token is "Basic TnVtcHlAZ21haWwuY29tOnVzZXJhcGlAb2N0b2Jlcg=="                                            # com.api.stepdefinition.API_StepDefinitions.the_authorization_token_is(java.lang.String)
+  And I send a POST request to create a new user with the following details:                                                     # com.api.stepdefinition.API_StepDefinitions.i_send_a_post_request_to_create_a_new_user_with_the_following_details(java.util.List<java.util.Map<java.lang.String, java.lang.String>>)
+  When I validate the response status code is 201                                                                                # com.api.stepdefinition.API_StepDefinitions.i_validate_the_response_status_code_is(int)
+  And I validate the response contains the user with first name "veenavv", last name "papavv", and email "veenapapavv@gmail.com" # com.api.stepdefinition.API_StepDefinitions.i_validate_the_response_contains_the_user_with_first_name_last_name_and_email(java.lang.String,java.lang.String,java.lang.String)
+
+@userGetALLAPI
+Scenario: Validate status code for the Get All Users endpoint                               # src/test/resources/features/UserAPI.feature:16
+  Given the API endpoint is "https://userserviceapp-f5a54828541b.herokuapp.com/uap/users"   # com.api.stepdefinition.API_StepDefinitions.the_api_endpoint_is(java.lang.String)
+  And the Authorization token is "Basic TnVtcHlAZ21haWwuY29tOnVzZXJhcGlAb2N0b2Jlcg=="       # com.api.stepdefinition.API_StepDefinitions.the_authorization_token_is(java.lang.String)
+  When I validate the status code is 200                                                    # com.api.stepdefinition.API_StepDefinitions.validateStatusCode(int)
+  Then I validate the response header contains "Content-Type" with value "application/json" # com.api.stepdefinition.API_StepDefinitions.validateResponseHeader(java.lang.String,java.lang.String)
+
+@userGetbyUserID
+Scenario: Validate status code 200 for valid user ID                                           # src/test/resources/features/UserAPI.feature:24
+  Given the API endpoint is "https://userserviceapp-f5a54828541b.herokuapp.com/uap/user"       # com.api.stepdefinition.API_StepDefinitions.the_api_endpoint_is(java.lang.String)
+  And the user ID is "10136"                                                                   # com.api.stepdefinition.API_StepDefinitions.setUserId(java.lang.String)
+  And the Authorization token is "Basic TnVtcHlAZ21haWwuY29tOnVzZXJhcGlAb2N0b2Jlcg=="          # com.api.stepdefinition.API_StepDefinitions.the_authorization_token_is(java.lang.String)
+  When I send a GET request to fetch the user details                                          # com.api.stepdefinition.API_StepDefinitions.sendGetRequest()
+  Then I validate the GET status code is 200                                                   # com.api.stepdefinition.API_StepDefinitions.i_validate_the_get_status_code_is(int)
+  And I validate the GET response header contains "Content-Type" with value "application/json" # com.api.stepdefinition.API_StepDefinitions.i_validate_the_get_response_header_contains_with_value(java.lang.String,java.lang.String)
+
+@updateUser
+Scenario: Update user and validate the response                                                                                               # src/test/resources/features/UserAPI.feature:33
+  Given the API endpoint is "https://userserviceapp-f5a54828541b.herokuapp.com/uap/updateuser/10125"                                          # com.api.stepdefinition.API_StepDefinitions.the_api_endpoint_is(java.lang.String)
+  And the Authorization token is "Basic TnVtcHlAZ21haWwuY29tOnVzZXJhcGlAb2N0b2Jlcg=="                                                         # com.api.stepdefinition.API_StepDefinitions.the_authorization_token_is(java.lang.String)
+  And I send an update request to create a new user with the following details:                                                               # com.api.stepdefinition.API_StepDefinitions.iSendAnUpdateRequestToCreateANewUserWithTheFollowingDetails(io.cucumber.datatable.DataTable)
+  When I validate the update user response status code is 200                                                                                 # com.api.stepdefinition.API_StepDefinitions.iValidateTheUpdateUserResponseStatusCodeIs(int)
+  And I validate the update user response contains the user with first name "lavanya", last name "John", and email "Team03LavaJohn@gmail.com" # com.api.stepdefinition.API_StepDefinitions.iValidateTheUpdateUserResponseContainsTheUserWithDetails(java.lang.String,java.lang.String,java.lang.String)
+
+@deleteUserbyID
+Scenario: delete user by id and validate the response                                          # src/test/resources/features/UserAPI.feature:43
+  Given the API endpoint is "https://userserviceapp-f5a54828541b.herokuapp.com/uap/deleteuser" # com.api.stepdefinition.API_StepDefinitions.the_api_endpoint_is(java.lang.String)
+  And the Authorization token is "Basic TnVtcHlAZ21haWwuY29tOnVzZXJhcGlAb2N0b2Jlcg=="          # com.api.stepdefinition.API_StepDefinitions.the_authorization_token_is(java.lang.String)
+  And the user ID is "10126"                                                                   # com.api.stepdefinition.API_StepDefinitions.setUserId(java.lang.String)
+  When I validate the delete user response status code is 200                                  # com.api.stepdefinition.API_StepDefinitions.iValidateTheDeleteUserResponseStatusCodeIs(int)
+
+@deleteUserbyFirstName
+Scenario: delete user by firstname and validate the response                                            # src/test/resources/features/UserAPI.feature:51
+  Given the API endpoint is "https://userserviceapp-f5a54828541b.herokuapp.com/uap/deleteuser/username" # com.api.stepdefinition.API_StepDefinitions.the_api_endpoint_is(java.lang.String)
+  And the Authorization token is "Basic TnVtcHlAZ21haWwuY29tOnVzZXJhcGlAb2N0b2Jlcg=="                   # com.api.stepdefinition.API_StepDefinitions.the_authorization_token_is(java.lang.String)
+  And the user first name is "Ramuc"                                                                    # com.api.stepdefinition.API_StepDefinitions.setUserFirstName(java.lang.String)
+  When I validate the delete user by firstname response status code is 200                              # com.api.stepdefinition.API_StepDefinitions.iValidateTheDeleteUserbyFirstNameResponseStatusCodeIs(int)
